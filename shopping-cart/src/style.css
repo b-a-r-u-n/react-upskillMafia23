@@ -35,8 +35,28 @@ nav{
 .list ul{
     display: flex;
     gap: 2vw;
+}
+
+.list a{
     font-size: 2vw;
     font-weight: 500;
+    position: relative;
+}
+
+.list a:after{
+    z-index: 100;
+    position: absolute;
+    content: "";
+    background-color: aqua;
+    left: 0;
+    height: 0.8vh;
+    width: 0;
+    bottom: -0.5vh;
+    transition: all ease 0.7s;
+}
+
+.list a:hover::after{
+    width: 100%;
 }
 /*          NAV BAR        */
 
