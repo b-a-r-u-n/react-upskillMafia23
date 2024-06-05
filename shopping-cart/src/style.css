@@ -18,9 +18,13 @@ a{
 /*          NAV BAR        */
 
 nav{
-    
+    padding: 1vh 8vw;
     display: flex;
+    align-items: center;
+    gap: 10vw;
+    background-color: #f5ebe0;
 }
+
 .logo{
     background-image: url('./Images/logo.png');
     height: 10vh;
@@ -28,5 +32,11 @@ nav{
     background-size: 100% 100%;
 }
 
+.list ul{
+    display: flex;
+    gap: 2vw;
+    font-size: 2vw;
+    font-weight: 500;
+}
 /*          NAV BAR        */
 
