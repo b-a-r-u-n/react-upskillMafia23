@@ -36,6 +36,7 @@ function App() {
     }
     if(arr[ind].amount === 0){
       // console.log(item.id);
+      arr[ind].amount = 1;
       removeItem(item.id);
     }
   }
