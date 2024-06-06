@@ -46,7 +46,7 @@ const Cart = ({cart , Setcart , handleAmmount}) => {
                                 <div className="amount">{item.amount}</div>
                                 <button className="add-btn" onClick={() => handleAmmount(item , +1)}><i className="fa-solid fa-plus"></i></button>
                             </div>
-                            <button className="remove"><i className="fa-regular fa-trash-can" onClick={() => removeItem(item.id)}></i></button>
+                            <button className="remove" onClick={() => removeItem(item.id)}><i className="fa-regular fa-trash-can"></i></button>
 
                         </div>
                     )

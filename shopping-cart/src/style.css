@@ -199,6 +199,7 @@ section{
 }
 
 .remove{
+    display: inline-block;
     height: 3vh;
     width: 5vw;
     background-color: #c9184a60;
