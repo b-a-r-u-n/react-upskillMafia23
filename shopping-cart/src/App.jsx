@@ -29,20 +29,33 @@ function App() {
     })
     let arr = cart;
     arr[ind].amount += d;
-    if(arr[ind].amount === 0)
-      arr[ind].amount = 1;
+    
+    Setcart([...arr]);
     if(arr[ind].amount === 11){
-      console.log("Click me");
       arr[ind].amount = 10;
     }
-    Setcart([...arr])
+    if(arr[ind].amount === 0){
+      // console.log(item.id);
+      removeItem(item.id);
+    }
+  }
+
+  const removeItem = (id) => {
+    // console.log(cart);
+    let arr1 = cart.filter((item) => {
+        if(item.id != id){
+            return item;
+        }
+    })
+    // console.log(arr1);
+    Setcart(arr1);
   }
 
   return (
     <>
       <Nav />
       <Card AddToCart={AddToCart}/>
-      <Cart cart={cart} Setcart={Setcart} key={cart.id} handleAmmount={handleAmmount}/>
+      <Cart cart={cart} Setcart={Setcart} key={cart.id} handleAmmount={handleAmmount} removeItem={removeItem}/>
     </>
   );
 }

@@ -1,11 +1,11 @@
 import React , {useState} from 'react';
 import { useEffect } from 'react';
 
-const Cart = ({cart , Setcart , handleAmmount}) => {
+const Cart = ({cart , Setcart , handleAmmount , removeItem}) => {
     // console.log(cart.id);
     let [price , Setprice] = useState(0);
 
-    let handalePrice = () => {
+    const handalePrice = () => {
         let total = 0;
         cart.map((item) => {
             total += item.price * item.amount;
@@ -17,14 +17,14 @@ const Cart = ({cart , Setcart , handleAmmount}) => {
         handalePrice();
     })
 
-    const removeItem = (id) => {
-        let arr = cart.filter((item) => {
-            if(item.id != id){
-                return item;
-            }
-        })
-        Setcart(arr);  
-    }
+    // const removeItem = (id) => {
+    //     let arr = cart.filter((item) => {
+    //         if(item.id != id){
+    //             return item;
+    //         }
+    //     })
+    //     Setcart(arr);  
+    // }
 
     return(
         <div className="cart-container">
