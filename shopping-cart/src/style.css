@@ -23,6 +23,9 @@ nav{
     align-items: center;
     gap: 10vw;
     background-color: #f5ebe0;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 .logo{
@@ -63,7 +66,13 @@ nav{
 
 /*           CARD          */
 
+section{
+    display: flex;
+    gap: 5%;
+}
+
 .card-container{
+    margin-top: 12vh;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -133,4 +142,71 @@ nav{
     box-shadow: 2px 2px 10px white;
 }
 /*           CARD          */
+
+
+/*           CART          */
+
+.cart-container{
+    width: 38%;
+    /* min-height: 10vh; */
+    /* max-height: 30vh; */
+    position: fixed;
+    right: 0;
+    top: 20vh;
+    background-color: #f5f4ef;
+    padding: 3vh 2vw;
+    border-radius: 40px;
+}
+
+.heading{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.total{
+    text-align: center;
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.cart-items{
+    margin: 1vh 0;
+    display: flex;
+    gap: 0.8vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-name-price{
+    width: 70%;
+}
+
+.cart-name{
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.cart-price{
+    font-size: 1.1vw;
+    font-weight: 800;
+    
+}
+
+.buttons{
+    display: flex;
+    height: 2vh;
+    gap: 0.5vw;
+}
+
+.remove{
+    height: 3vh;
+    width: 5vw;
+    background-color: #c9184a60;
+    color: red;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*           CART          */
 
